@@ -25,7 +25,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("JAVAFX Welcome");
         primaryStage.setScene(new Scene(root, 300, 275));
 
         GridPane grid = new GridPane();
@@ -37,7 +37,7 @@ public class Main extends Application {
         Scene scene = new Scene(grid, 300, 275);
 
         Text scenetitle = new Text("Welcome");
-        //scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
+
         scenetitle.setId("welcome-text");
         grid.add(scenetitle, 0, 0, 2, 1);
 
@@ -66,7 +66,7 @@ public class Main extends Application {
 
             @Override
             public void handle(ActionEvent e) {
-                //actiontarget.setFill(Color.FIREBRICK);
+
                 actiontarget.setId("actiontarget");
                 actiontarget.setText("Sign in button pressed");
             }
@@ -75,7 +75,7 @@ public class Main extends Application {
 
         primaryStage.setScene(scene);
         scene.getStylesheets().add
-                (Main.class.getResource("Theme.css").toExternalForm());
+                (Main.class.getResource("Theme1.css").toExternalForm());
         primaryStage.show();
     }
 
